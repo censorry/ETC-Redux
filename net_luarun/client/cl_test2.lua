@@ -1,1 +1,1 @@
-print("hehe boi");
+print("cl_test2.lua)
