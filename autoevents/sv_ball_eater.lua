@@ -20,24 +20,16 @@ end;
 
 --
 
-local SetPlayerSize=function(ply,scale)
-	ply:SetViewOffset(Vector(0,0,64*scale));
-	ply:SetViewOffsetDucked(Vector(0,0,28*scale));
-	ply:SetModelScale(scale,0);
-end;
-
-local ResetPlayerSize=function(ply)
-	ply:SetViewOffset(Vector(0,0,64));
-	ply:SetViewOffsetDucked(Vector(0,0,28));
-	ply:SetModelScale(1,0);
-end;
-
---
-
 local Do_SendBall_SizeUpper,Do_SendBall_Normal;
 do
 	local sent_ball=scripted_ents.GetStored("sent_ball").t;
 	do
+		local SetPlayerSize=function(ply,scale)
+			ply:SetViewOffset(Vector(0,0,64*scale));
+			ply:SetViewOffsetDucked(Vector(0,0,28*scale));
+			ply:SetModelScale(scale,0);
+		end;
+		--
 		local score;
 		Do_SendBall_SizeUpper=function()
 			sent_ball.Use=function(self,activator)
@@ -87,6 +79,14 @@ do
 			end;
 		end;
 	end;
+end;
+
+--
+
+local ResetPlayerSize=function(ply)
+	ply:SetViewOffset(Vector(0,0,64));
+	ply:SetViewOffsetDucked(Vector(0,0,28));
+	ply:SetModelScale(1,0);
 end;
 
 --
