@@ -1,1 +1,1 @@
-print("cl_test.lua");
+print("cl_test.lua);
