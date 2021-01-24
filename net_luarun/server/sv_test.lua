@@ -1,1 +1,0 @@
-print("sv_test.lua");

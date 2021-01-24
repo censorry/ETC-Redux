@@ -1,1 +1,0 @@
-print("sh_test.lua");
